@@ -26,8 +26,9 @@ class XmlDoc(doc_type.DocumentationType):
 
             current_entry_xml = None
             for line in input:
-                # strip the newline
-                line = line[:-1]
+                # strip the newline if it is there
+                if len(line) > 0 and line[-1] == "\n":
+                    line = line[:-1]
 
                 (indent, content) = self.lstrip_split(line)
                 if content.startswith("///"):

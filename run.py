@@ -6,7 +6,6 @@ import os
 dox = cd.ClassicDoxygen()
 xml = xd.XmlDoc()
 
-print(os.getcwd())
 if not os.path.exists("converted"):
     os.mkdir("converted")
 
